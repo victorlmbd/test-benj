@@ -1,0 +1,13 @@
+<h1 class="title"> Discover some trees</h1>
+<div class="container">
+  <p><%= @trees.each do |tree|%></p>
+  <p><%= tree.name %></p>
+  <p><%= tree.address %></p>
+  <p><%= tree.description %></p>
+  <p><%= tree.fruit_type %></p>
+  <p><%= tree.price_per_year %></p>
+  <p><%= tree.quantity_per_year %></p>
+<%= link_to"see the tree", tree_path(tree.id), class: "btn btn-primary" %>
+<%= link_to "delete", tree_path(tree.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "delete"%>
+  <% end %>
+</div>
