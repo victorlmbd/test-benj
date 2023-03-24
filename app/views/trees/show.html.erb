@@ -1,0 +1,10 @@
+<div class="container">
+  <p><%= @tree.name %></p>
+  <p><%= @tree.address %></p>
+  <p><%= @tree.description %></p>
+  <p><%= @tree.fruit_type %></p>
+  <p><%= @tree.price_per_year %></p>
+  <p><%= @tree.quantity_per_year %></p>
+  <%= link_to"edit the tree", edit_tree_path(@tree.id), class: "btn btn-primary" %>
+  <%= link_to"see all tree", trees_path, class: "btn btn-primary" %>
+</div>
